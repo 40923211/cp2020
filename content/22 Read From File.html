@@ -1,0 +1,249 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923211 cp2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923211 cp2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='HW2.html'>HW2</a><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='20 Element Search.html'>20 Element Search</a><li><a href='21 Write To A File.html'>21 Write To A File</a><li><a href='22 Read From File.html'>22 Read From File</a><li><a href='23 File Overlap.html'>23 File Overlap</a></li></ul><li><a href='kaggle.html'>kaggle</a><li class='has-children'><a href='homework1.html'>homework1</a><ul class='dropdown'><li><a href='pch 10 Network Devices.html'>pch 10 Network Devices</a><li><a href='pch 9 Network Defined by Topology.html'>pch 9 Network Defined by Topology</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">21 Write To A File << <a href='21 Write To A File.html'>Previous</a> <a href='23 File Overlap.html'>Next</a> >> 23 File Overlap<br /><h1>22 Read From File</h1>
+<p>Exercise 22 (and<span> </span><a href="https://www.practicepython.org/solution/2014/12/14/22-read-from-file-solutions.html">Solution</a>)</p>
+<p><span lang="zh-TW">練習22（和解決方案） 給定一個.txt文件，其中列出了一堆名字<br/></span></p>
+<p><span>Given a </span><code class="highlighter-rouge">.txt</code><span><span> </span>file that has a list of a bunch of names, count how many of each name there are in the file, and print out the results to the screen. I have a<span> </span></span><code class="highlighter-rouge">.txt</code><span><span> </span>file for you, if you want to<span> </span></span><a href="http://www.practicepython.org/assets/nameslist.txt">use it</a><span>!</span></p>
+<p><span lang="zh-TW">給定一個具有一堆名稱列表的.txt文件，請計算該文件中每個名稱的數量，然後將結果打印到屏幕上。如果您想使用它，我有一個.txt文件！</span></p>
+<p><span lang="zh-TW"><span>Extra:</span></span></p>
+<p><span lang="zh-TW">額外：<br/></span></p>
+<ul>
+<li>Instead of using the<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file from above (or instead of, if you want the challenge), take<span> </span><a href="http://www.practicepython.org/assets/Training_01.txt">this<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file</a>, and count how many of each “category” of each image there are. This text file is actually a list of files corresponding to the<span> </span><a href="http://sundatabase.mit.edu/">SUN database</a><span> </span>scene recognition database, and lists the file directory hierarchy for the images. Once you take a look at the first line or two of the file, it will be clear which part represents the scene category. To do this, you’re going to have to remember a bit about string parsing in Python 3. I talked a little bit about it<span> </span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html">in this post</a>.</li>
+</ul>
+<p><span lang="zh-TW">不要使用上方的.txt文件（或者，如果您想挑戰，也可以使用該.txt文件），請使用此.txt文件，併計算每個圖像的每個“類別”有多少個。該文本文件實際上是與SUN數據庫場景識別數據庫相對應的文件的列表，並且列出了圖像的文件目錄層次結構。查看文件的第一行或第二行後，將很清楚哪個部分代表場景類別。為此，您將需要記住一些有關Python 3中的字符串解析的知識。我在本文中對此進行了一些討論。</span></p>
+<p>Discussion</p>
+<p><span>討論區</span></p>
+<p>Topics:</p>
+<ol>
+<li>Reading a file</li>
+<li>Dictionaries</li>
+</ol>
+<p><span lang="zh-TW">話題： 讀取文件 辭典<br/></span></p>
+<p>Reading a File</p>
+<p><span>讀取文件</span></p>
+<p><span lang="zh-TW"><span>Reading a file is very analogous to writing a file, as </span><a href="https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html">I discussed before in Exercise 21</a><span>. But, the best source is always the<span> </span></span><a href="https://docs.python.org/3.3/tutorial/inputoutput.html#reading-and-writing-files">official Python 3.3 documentation</a><span>.</span></span></p>
+<p><span lang="zh-TW">正如我之前在練習21中所討論的那樣，讀取文件與寫入文件非常相似。但是，最好的來源始終是Python 3.3官方文檔。</span></p>
+<p>Simply, reading to a file takes two steps:</p>
+<ol>
+<li>Opening the file for reading</li>
+<li>Read!</li>
+</ol>
+<p><span lang="zh-TW">簡單來說，讀取文件需要兩個步驟： 打開文件進行讀取 讀！</span></p>
+<p><span lang="zh-TW"><span>Opening a file for reading is the same as opening for writing, just using a different flag:</span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+    <span class="n">all_text</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code></pre>
+<p><span lang="zh-TW">打開文件進行讀取與打開文件相同，只是使用一個不同的標誌：<br/><br/><span>Note how the </span><code class="highlighter-rouge">'r'</code><span><span> </span>flag stands for “read”. The code sample from above reads the entire<span> </span></span><code class="highlighter-rouge">open_file</code><span><span> </span>all at once into the<span> </span></span><code class="highlighter-rouge">all_text</code><span><span> </span>variable. But, this means that we now have a long string in<span> </span></span><code class="highlighter-rouge">all_text</code><span><span> </span>that can then be manipulated in Python using any string methods you want.</span></span></p>
+<p><span lang="zh-TW">注意“ r”標誌代表“ read”。上面的代碼示例將整個open_file一次全部讀取到all_text變量中。但是，這意味著我們現在在all_text中擁有一個長字符串，然後可以使用所需的任何字符串方法在Python中對其進行操作。</span></p>
+<p><span lang="zh-TW"><span>Another way of reading data from the file is line by line:<br/></span></span></p>
+<pre><code class="language-python" data-lang="python"> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+  	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+  	<span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+    	<span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code></pre>
+<p><span lang="zh-TW">從文件讀取數據的另一種方法是逐行：<br/><span>Instead of </span><code class="highlighter-rouge">print(line)</code><span>, you can imagine doing anything you want to the line of text… If you save it to a variable, you have a string that you can then use something like<span> </span></span><code class="highlighter-rouge">.strip()</code><span><span> </span>or<span> </span></span><code class="highlighter-rouge">.split()</code><span><span> </span>with.<br/></span></span></p>
+<p><span lang="zh-TW">代替print（line），您可以想像對文本行進行任何操作……如果將其保存到變量中，則可以使用一個字符串，然後可以使用.strip（）或.split（）之類的東西。</span></p>
+<p>Dictionaries</p>
+<p><span>辭典</span></p>
+<p><span>Dictionaries are Python’s way of associating two pieces of data together. The <a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official documentation</a><span><span> </span>says it all.</span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Adama'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Starbuck'</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s">'Apollo'</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s">'Athena'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s">'Agathon'</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span></code></pre>
+<p><span><span>字典是Python將兩種數據關聯在一起的一種方式。官方文檔說明了一切。</span></span></p>
+<p><span><span>The strings (or whatever happens to the left of the <code class="highlighter-rouge">:</code><span><span> </span>sign), are called<span> </span></span><code class="highlighter-rouge">keys</code><span>. When I want to access the<span> </span></span><code class="highlighter-rouge">values</code><span><span> </span>(the things to the right of the<span> </span></span><code class="highlighter-rouge">:</code><span><span> </span>sign), I need to ask the dictionary for the value associated with the key:</span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span></code></pre>
+<p><span lang="zh-TW">字符串（或：符號左側發生的任何事情）稱為鍵。當我想訪問值（：符號右邊的東西）時，我需要向字典查詢與鍵關聯的值：<br/><span>You can then modify the score and save it back to the dictionary:</span><br/></span></p>
+<pre><code class="language-python" data-lang="python"> <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span>
+  <span class="n">adama_score</span> <span class="o">+=</span> <span class="mi">100</span>	<span class="o">%</span> <span class="n">adama_score</span> <span class="ow">is</span> <span class="n">now</span> <span class="mf">200.</span> <span class="n">This</span> <span class="n">doesn</span><span class="s">'t change the dictionary value</span><span class="err">
+</span><span class="s">  student_scores['</span><span class="n">Adama</span><span class="s">'] = adama_score		</span><span class="si">% </span><span class="s">the score in the dictionary is now updated</span></code></pre>
+<p><span lang="zh-TW">然後，您可以修改分數並將其保存回字典：<br/><span>I can’t ask the dictionary for the key associated with a value, but I can get a list of all the keys, and the same for all the values:</span></span></p>
+<pre><code class="language-python" data-lang="python"> <span class="n">all_scores</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+  <span class="n">all_names</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></code></pre>
+<p><span lang="zh-TW">我無法向字典詢問與某個值相關聯的鍵，但是我可以獲得所有鍵的列表，並且所有值都相同：<br/><span>I can use the </span><code class="highlighter-rouge">in</code><span><span> </span>keyword (just like in lists), do<span> </span></span><code class="highlighter-rouge">dictionary comprehensions</code><span><span> </span>like list comprehensions (these are cool, take a look at the<span> </span></span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official bit about these</a><span>), and iterate over the elements in the dictionary (the syntax is just a little bit different).</span></span></p>
+<pre><code class="language-python" data-lang="python"> <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+  	<span class="k">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span></code></pre>
+<p><span lang="zh-TW">我可以使用in關鍵字（就像在列表中一樣），做字典理解（例如列表理解）（這些很酷，看看有關這些的官方知識），然後遍歷字典中的元素（語法只是一點點）有點不同）。</span></p>
+<p>And this prints out pairs of keys and values that look like:<span> </span><code class="highlighter-rouge">(Adama, 100)</code>, etc.</p>
+<p>Because dictionaries are not ordered, looping through them does not guarantee the key / value pairs coming out in a particular order. So be careful.</p>
+<p><span>這會打印出如下的鍵和值對：（Adama，100），等等。 由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</span></p>
+<br />21 Write To A File << <a href='21 Write To A File.html'>Previous</a> <a href='23 File Overlap.html'>Next</a> >> 23 File Overlap</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
