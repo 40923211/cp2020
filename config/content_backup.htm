@@ -5,17 +5,18 @@
 <h2>作業2-1</h2>
 <p><a href="https://www.kaggle.com/chentinghan/cp2020-hw2/edit">https://www.kaggle.com/chentinghan/cp2020-hw2/edit</a></p>
 <p>方法一 :</p>
-<pre><span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="c1">#導入urllib.request</span>
-<span class="n">target_url</span> <span class="o">=</span> <span class="s2">"https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"</span>
-<span class="c1">#設target_url = "網址"</span>
-<span class="n">cp1b</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1">#設cp1b=數列</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">target_url</span><span class="p">):</span>
-<span class="c1">#重複打開target_url的迴圈定義line</span>
-    <span class="n">cp1b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
-    <span class="c1">#把line重新編碼加進cp1b(數列)   註:rstrip()刪除字尾符號</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cp1b</span><span class="p">)</span></pre>
+<pre class="brush:py;auto-links:false;toolbar:false;first-line:2;tab-size:10" contenteditable="false">import urllib.request
+#導入urllib.request
+target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+#設target_url = "網址"
+cp1b = []
+#設cp1b=數列
+for line in urllib.request.urlopen(target_url):
+#重複打開target_url的迴圈定義line
+    cp1b.append(int(line.decode('utf-8').rstrip()))
+    #把line重新編碼加進cp1b(數列)   註:rstrip()刪除字尾符號
+print(cp1b)</pre>
+<pre><br/><br/></pre>
 <p><img alt="" height="264" src="/images/螢幕擷取畫面 2020-12-08 153151.png" width="456"/></p>
 <p></p>
 <p>方法二:</p>
@@ -23,29 +24,23 @@
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3">
-<pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">shuffle</span> <span class="c1">#導入隨機洗牌</span>
-<span class="nb">list</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">40523138</span><span class="p">,</span><span class="mi">40523148</span><span class="p">,</span><span class="mi">40723217</span><span class="p">,</span><span class="mi">40728238</span><span class="p">,</span><span class="mi">40823148</span><span class="p">,</span><span class="mi">40823152</span><span class="p">,</span><span class="mi">40923201</span><span class="p">,</span><span class="mi">40923202</span><span class="p">,</span><span class="mi">40923203</span><span class="p">,</span><span class="mi">40923204</span><span class="p">,</span><span class="mi">40923205</span><span class="p">,</span>
-<span class="mi">40923206</span><span class="p">,</span><span class="mi">40923207</span><span class="p">,</span><span class="mi">40923208</span><span class="p">,</span><span class="mi">40923209</span><span class="p">,</span><span class="mi">40923210</span><span class="p">,</span><span class="mi">40923211</span><span class="p">,</span><span class="mi">40923212</span><span class="p">,</span><span class="mi">40923213</span><span class="p">,</span><span class="mi">40923214</span><span class="p">,</span><span class="mi">40923216</span><span class="p">,</span><span class="mi">40923217</span><span class="p">,</span><span class="mi">40923218</span><span class="p">,</span>
-<span class="mi">40923219</span><span class="p">,</span><span class="mi">40923220</span><span class="p">,</span><span class="mi">40923221</span><span class="p">,</span><span class="mi">40923223</span><span class="p">,</span><span class="mi">40923224</span><span class="p">,</span><span class="mi">40923225</span><span class="p">,</span><span class="mi">40923226</span><span class="p">,</span><span class="mi">40923227</span><span class="p">,</span><span class="mi">40923228</span><span class="p">,</span><span class="mi">40923229</span><span class="p">,</span><span class="mi">40923230</span><span class="p">,</span><span class="mi">40923231</span><span class="p">,</span>
-<span class="mi">40923232</span><span class="p">,</span><span class="mi">40923233</span><span class="p">,</span><span class="mi">40923234</span><span class="p">,</span><span class="mi">40923235</span><span class="p">,</span><span class="mi">40923236</span><span class="p">,</span><span class="mi">40923237</span><span class="p">,</span><span class="mi">40923238</span><span class="p">,</span><span class="mi">40923239</span><span class="p">,</span><span class="mi">40923240</span><span class="p">,</span><span class="mi">40923241</span><span class="p">,</span><span class="mi">40923242</span><span class="p">,</span><span class="mi">40923243</span><span class="p">,</span>
-<span class="mi">40923244</span><span class="p">,</span><span class="mi">40923245</span><span class="p">,</span><span class="mi">40923246</span><span class="p">,</span><span class="mi">40923247</span><span class="p">,</span><span class="mi">40923248</span><span class="p">,</span><span class="mi">40923249</span><span class="p">,</span><span class="mi">40923250</span><span class="p">,</span><span class="mi">40923251</span><span class="p">,</span><span class="mi">40923252</span><span class="p">,</span><span class="mi">40923253</span><span class="p">]</span> 
-<span class="c1">#列表[]</span>
-<span class="n">shuffle</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="c1">#shuffle=洗牌</span>
-<span class="n">n</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> 
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span> 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="n">m</span><span class="p">):</span> <span class="c1">#range()是一个函数， for i in range () 就是给i赋值： </span>
-    <span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">m</span><span class="p">])</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span> 
+<pre class="brush:py;auto-links:false;toolbar:false;tab-size:20" contenteditable="false">from random import shuffle #導入隨機洗牌
+list  = [40523138,40523148,40723217,40728238,40823148,40823152,40923201,40923202,40923203,40923204,40923205,
+40923206,40923207,40923208,40923209,40923210,40923211,40923212,40923213,40923214,40923216,40923217,40923218,
+40923219,40923220,40923221,40923223,40923224,40923225,40923226,40923227,40923228,40923229,40923230,40923231,
+40923232,40923233,40923234,40923235,40923236,40923237,40923238,40923239,40923240,40923241,40923242,40923243,
+40923244,40923245,40923246,40923247,40923248,40923249,40923250,40923251,40923252,40923253] 
+#列表[]
+shuffle(list) #shuffle=洗牌
+n=5
+m = int(len(list)/n) 
+list2 = [] 
+for i in range(0, len(list), m): #range()是一个函数， for i in range () 就是给i赋值： 
+    list2.append(list[i:i+m]) 
+print(list2) 
 </pre>
+<pre><br/><br/></pre>
 </div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
 </div>
 </div>
 </div>
@@ -243,40 +238,44 @@
 </ol>
 <p><span lang="zh-TW">簡單來說，讀取文件需要兩個步驟： 打開文件進行讀取 讀！</span></p>
 <p><span lang="zh-TW"><span>Opening a file for reading is the same as opening for writing, just using a different flag:</span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
-    <span class="n">all_text</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open('file_to_read.txt', 'r') as open_file:
+    all_text = open_file.read()</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">打開文件進行讀取與打開文件相同，只是使用一個不同的標誌：<br/><br/><span>Note how the </span><code class="highlighter-rouge">'r'</code><span><span> </span>flag stands for “read”. The code sample from above reads the entire<span> </span></span><code class="highlighter-rouge">open_file</code><span><span> </span>all at once into the<span> </span></span><code class="highlighter-rouge">all_text</code><span><span> </span>variable. But, this means that we now have a long string in<span> </span></span><code class="highlighter-rouge">all_text</code><span><span> </span>that can then be manipulated in Python using any string methods you want.</span></span></p>
 <p><span lang="zh-TW">注意“ r”標誌代表“ read”。上面的代碼示例將整個open_file一次全部讀取到all_text變量中。但是，這意味著我們現在在all_text中擁有一個長字符串，然後可以使用所需的任何字符串方法在Python中對其進行操作。</span></p>
 <p><span lang="zh-TW"><span>Another way of reading data from the file is line by line:<br/></span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
-  	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-  	<span class="k">while</span> <span class="n">line</span><span class="p">:</span>
-    	<span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-    	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open('file_to_read.txt', 'r') as open_file:
+  	line = open_file.readline()
+  	while line:
+    	print(line)
+    	line = open_file.readline()</pre>
 <p><span lang="zh-TW">從文件讀取數據的另一種方法是逐行：<br/><span>Instead of </span><code class="highlighter-rouge">print(line)</code><span>, you can imagine doing anything you want to the line of text… If you save it to a variable, you have a string that you can then use something like<span> </span></span><code class="highlighter-rouge">.strip()</code><span><span> </span>or<span> </span></span><code class="highlighter-rouge">.split()</code><span><span> </span>with.<br/></span></span></p>
 <p><span lang="zh-TW">代替print（line），您可以想像對文本行進行任何操作……如果將其保存到變量中，則可以使用一個字符串，然後可以使用.strip（）或.split（）之類的東西。</span></p>
 <p>Dictionaries</p>
 <p><span>辭典</span></p>
 <p><span>Dictionaries are Python’s way of associating two pieces of data together. The <a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official documentation</a><span><span> </span>says it all.</span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Adama'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Starbuck'</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s">'Apollo'</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s">'Athena'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s">'Agathon'</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span></code></pre>
-<p><span><span>字典是Python將兩種數據關聯在一起的一種方式。官方文檔說明了一切。</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">student_scores = {'Adama': 100, 'Starbuck': 75, 'Apollo': 80, 'Athena': 85, 'Agathon': 90}
+</pre>
+<pre><span style="font-family: Verdana, Arial, Helvetica, sans-serif;"><br/>字典是Python將兩種數據關聯在一起的一種方式。官方文檔說明了一切。</span></pre>
 <p><span><span>The strings (or whatever happens to the left of the <code class="highlighter-rouge">:</code><span><span> </span>sign), are called<span> </span></span><code class="highlighter-rouge">keys</code><span>. When I want to access the<span> </span></span><code class="highlighter-rouge">values</code><span><span> </span>(the things to the right of the<span> </span></span><code class="highlighter-rouge">:</code><span><span> </span>sign), I need to ask the dictionary for the value associated with the key:</span></span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">adama_score = student_scores['Adama']</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">字符串（或：符號左側發生的任何事情）稱為鍵。當我想訪問值（：符號右邊的東西）時，我需要向字典查詢與鍵關聯的值：<br/><span>You can then modify the score and save it back to the dictionary:</span><br/></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span>
-  <span class="n">adama_score</span> <span class="o">+=</span> <span class="mi">100</span>	<span class="o">%</span> <span class="n">adama_score</span> <span class="ow">is</span> <span class="n">now</span> <span class="mf">200.</span> <span class="n">This</span> <span class="n">doesn</span><span class="s">'t change the dictionary value</span><span class="err">
-</span><span class="s">  student_scores['</span><span class="n">Adama</span><span class="s">'] = adama_score		</span><span class="si">% </span><span class="s">the score in the dictionary is now updated</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> adama_score = student_scores['Adama']
+  adama_score += 100	% adama_score is now 200. This doesn't change the dictionary value
+  student_scores['Adama'] = adama_score		% the score in the dictionary is now updated</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">然後，您可以修改分數並將其保存回字典：<br/><span>I can’t ask the dictionary for the key associated with a value, but I can get a list of all the keys, and the same for all the values:</span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="n">all_scores</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-  <span class="n">all_names</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> all_scores = student_scores.keys()
+  all_names = student_scores.values()</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">我無法向字典詢問與某個值相關聯的鍵，但是我可以獲得所有鍵的列表，並且所有值都相同：<br/><span>I can use the </span><code class="highlighter-rouge">in</code><span><span> </span>keyword (just like in lists), do<span> </span></span><code class="highlighter-rouge">dictionary comprehensions</code><span><span> </span>like list comprehensions (these are cool, take a look at the<span> </span></span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official bit about these</a><span>), and iterate over the elements in the dictionary (the syntax is just a little bit different).</span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-  	<span class="k">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for pair in student_scores.items():
+  	print(pair)</pre>
 <p><span lang="zh-TW">我可以使用in關鍵字（就像在列表中一樣），做字典理解（例如列表理解）（這些很酷，看看有關這些的官方知識），然後遍歷字典中的元素（語法只是一點點）有點不同）。</span></p>
 <p>And this prints out pairs of keys and values that look like:<span> </span><code class="highlighter-rouge">(Adama, 100)</code>, etc.</p>
 <p>Because dictionaries are not ordered, looping through them does not guarantee the key / value pairs coming out in a particular order. So be careful.</p>
-<p><span>這會打印出如下的鍵和值對：（Adama，100），等等。 由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</span></p>
-<h2>23 File Overlap</h2>
+<p><span>這會打印出如下的鍵和值對：（Adama，100），等等。 由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</span></p><h2>23 File Overlap</h2>
 <pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW"></span></pre>
 <p>Exercise 23 (and<span> </span><a href="https://www.practicepython.org/solution/2014/12/25/23-file-overlap-solutions.html">Solution</a>)</p>
 <pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">練習23（和解決方案）<br/></span></pre>

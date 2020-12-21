@@ -5,17 +5,18 @@
 <h2>作業2-1</h2>
 <p><a href="https://www.kaggle.com/chentinghan/cp2020-hw2/edit">https://www.kaggle.com/chentinghan/cp2020-hw2/edit</a></p>
 <p>方法一 :</p>
-<pre><span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="c1">#導入urllib.request</span>
-<span class="n">target_url</span> <span class="o">=</span> <span class="s2">"https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"</span>
-<span class="c1">#設target_url = "網址"</span>
-<span class="n">cp1b</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1">#設cp1b=數列</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">target_url</span><span class="p">):</span>
-<span class="c1">#重複打開target_url的迴圈定義line</span>
-    <span class="n">cp1b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()))</span>
-    <span class="c1">#把line重新編碼加進cp1b(數列)   註:rstrip()刪除字尾符號</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cp1b</span><span class="p">)</span></pre>
+<pre class="brush:py;auto-links:false;toolbar:false;first-line:10;tab-size:10" contenteditable="false">import urllib.request
+#導入urllib.request
+target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+#設target_url = "網址"
+cp1b = []
+#設cp1b=數列
+for line in urllib.request.urlopen(target_url):
+#重複打開target_url的迴圈定義line
+    cp1b.append(int(line.decode('utf-8').rstrip()))
+    #把line重新編碼加進cp1b(數列)   註:rstrip()刪除字尾符號
+print(cp1b)</pre>
+<pre><br/><br/></pre>
 <p><img alt="" height="264" src="/images/螢幕擷取畫面 2020-12-08 153151.png" width="456"/></p>
 <p></p>
 <p>方法二:</p>
@@ -23,29 +24,23 @@
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3">
-<pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">shuffle</span> <span class="c1">#導入隨機洗牌</span>
-<span class="nb">list</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">40523138</span><span class="p">,</span><span class="mi">40523148</span><span class="p">,</span><span class="mi">40723217</span><span class="p">,</span><span class="mi">40728238</span><span class="p">,</span><span class="mi">40823148</span><span class="p">,</span><span class="mi">40823152</span><span class="p">,</span><span class="mi">40923201</span><span class="p">,</span><span class="mi">40923202</span><span class="p">,</span><span class="mi">40923203</span><span class="p">,</span><span class="mi">40923204</span><span class="p">,</span><span class="mi">40923205</span><span class="p">,</span>
-<span class="mi">40923206</span><span class="p">,</span><span class="mi">40923207</span><span class="p">,</span><span class="mi">40923208</span><span class="p">,</span><span class="mi">40923209</span><span class="p">,</span><span class="mi">40923210</span><span class="p">,</span><span class="mi">40923211</span><span class="p">,</span><span class="mi">40923212</span><span class="p">,</span><span class="mi">40923213</span><span class="p">,</span><span class="mi">40923214</span><span class="p">,</span><span class="mi">40923216</span><span class="p">,</span><span class="mi">40923217</span><span class="p">,</span><span class="mi">40923218</span><span class="p">,</span>
-<span class="mi">40923219</span><span class="p">,</span><span class="mi">40923220</span><span class="p">,</span><span class="mi">40923221</span><span class="p">,</span><span class="mi">40923223</span><span class="p">,</span><span class="mi">40923224</span><span class="p">,</span><span class="mi">40923225</span><span class="p">,</span><span class="mi">40923226</span><span class="p">,</span><span class="mi">40923227</span><span class="p">,</span><span class="mi">40923228</span><span class="p">,</span><span class="mi">40923229</span><span class="p">,</span><span class="mi">40923230</span><span class="p">,</span><span class="mi">40923231</span><span class="p">,</span>
-<span class="mi">40923232</span><span class="p">,</span><span class="mi">40923233</span><span class="p">,</span><span class="mi">40923234</span><span class="p">,</span><span class="mi">40923235</span><span class="p">,</span><span class="mi">40923236</span><span class="p">,</span><span class="mi">40923237</span><span class="p">,</span><span class="mi">40923238</span><span class="p">,</span><span class="mi">40923239</span><span class="p">,</span><span class="mi">40923240</span><span class="p">,</span><span class="mi">40923241</span><span class="p">,</span><span class="mi">40923242</span><span class="p">,</span><span class="mi">40923243</span><span class="p">,</span>
-<span class="mi">40923244</span><span class="p">,</span><span class="mi">40923245</span><span class="p">,</span><span class="mi">40923246</span><span class="p">,</span><span class="mi">40923247</span><span class="p">,</span><span class="mi">40923248</span><span class="p">,</span><span class="mi">40923249</span><span class="p">,</span><span class="mi">40923250</span><span class="p">,</span><span class="mi">40923251</span><span class="p">,</span><span class="mi">40923252</span><span class="p">,</span><span class="mi">40923253</span><span class="p">]</span> 
-<span class="c1">#列表[]</span>
-<span class="n">shuffle</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="c1">#shuffle=洗牌</span>
-<span class="n">n</span><span class="o">=</span><span class="mi">5</span>
-<span class="n">m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> 
-<span class="n">list2</span> <span class="o">=</span> <span class="p">[]</span> 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="n">m</span><span class="p">):</span> <span class="c1">#range()是一个函数， for i in range () 就是给i赋值： </span>
-    <span class="n">list2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">m</span><span class="p">])</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">list2</span><span class="p">)</span> 
+<pre class="brush:py;auto-links:false;toolbar:false;tab-size:20" contenteditable="false">from random import shuffle #導入隨機洗牌
+list  = [40523138,40523148,40723217,40728238,40823148,40823152,40923201,40923202,40923203,40923204,40923205,
+40923206,40923207,40923208,40923209,40923210,40923211,40923212,40923213,40923214,40923216,40923217,40923218,
+40923219,40923220,40923221,40923223,40923224,40923225,40923226,40923227,40923228,40923229,40923230,40923231,
+40923232,40923233,40923234,40923235,40923236,40923237,40923238,40923239,40923240,40923241,40923242,40923243,
+40923244,40923245,40923246,40923247,40923248,40923249,40923250,40923251,40923252,40923253] 
+#列表[]
+shuffle(list) #shuffle=洗牌
+n=5
+m = int(len(list)/n) 
+list2 = [] 
+for i in range(0, len(list), m): #range()是一个函数， for i in range () 就是给i赋值： 
+    list2.append(list[i:i+m]) 
+print(list2) 
 </pre>
+<pre><br/><br/></pre>
 </div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
 </div>
 </div>
 </div>
