@@ -67,15 +67,27 @@
 <p>An obvious example is when using conditionals:</p>
 <p>布爾值<br/>在編寫程序時，通常會需要根據其他事物的真實性來做出決策。 基本上，您需要根據某物是TRUE還是FALSE來做出決定。</p>
 <p>一個明顯的例子是使用條件句時：</p>
-<p>michele_age = 22 truth_value = michele_age &gt; 17 if (truth_value): print("Michele can see a rated R movie")</p>
-<p></p>
+<p><br/><br/></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">michele_age = 22
+  truth_value = michele_age &gt; 17
+  if (truth_value):
+    print("Michele can see a rated R movie")</pre>
+<p><br/><br/></p>
 <p>(We talked about this idea of conditionals in a previous post.)</p>
 <p>But what is happening behind the scenes is that the statement michele_age &gt; 17 is being evaluated into a type that is either True or False. This is then getting stored inside the variable truth_value, and then the decision is being made inside the conditional.</p>
 <p>Here is another example:</p>
 <p>（我們在上一篇文章中談到了條件式的想法。）</p>
 <p>但是幕後發生的事情是，語句michele_age&gt; 17正在被評估為True或False類型。 然後將其存儲在變量true_value中，然後在條件中進行決策。</p>
 <p>這是另一個示例：</p>
-<p>while True: age = input("How old are you? ") if age &gt;= 17: print("can see a rated R movie") elif age &lt; 17 and age &gt; 12: print("can see a rated PG-13 movie") else: print("can only see rated PG movies")</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> while True:
+    age = input("How old are you? ")
+    if age &gt;= 17: 
+      print("can see a rated R movie")
+    elif age &lt; 17 and age &gt; 12:
+      print("can see a rated PG-13 movie")
+    else: 
+      print("can only see rated PG movies")</pre>
+<p></p>
 <p></p>
 <p>What the while True statement does at the beginning of the code segment is continue asking for an age and printing a response - it never stops. (To stop it, press CTRL-C in a terminal or in the Python shell).</p>
 <p>These types - True and False are called boolean types or boolean variables. They can only take on two values, either True or False.</p>
@@ -90,20 +102,36 @@
 <p>Scenarios come up where you need to test if things are equal to each other - numbers or strings or something else. We covered this idea in a previous post, but it is worth returning to again, this time for strings.</p>
 <p>Good thing it’s easy!</p>
 <p>Remember, comparing numbers for equality is done with an == sign, like so:</p>
-<p>age = 21 if age == 21: print("You are 21!") elif age &gt; 21: print("You're old.") else: print("Young one!")</p>
 <p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> age = 21
+  if age == 21:
+    print("You are 21!")
+  elif age &gt; 21:
+    print("You're old.")
+  else:
+    print("Young one!")</pre>
+<pre><br/><br/></pre>
 <p>出現場景時，您需要測試事物是否彼此相等-數字或字符串或其他。 我們在上一篇文章中介紹了這個想法，但是這次還是值得再次討論的。</p>
 <p>好東西很容易！</p>
 <p>請記住，比較數字是否相等是使用==符號完成的，如下所示：</p>
 <p></p>
-<p>password = "unsafepassword"<br/> if password == "unsafepassword":<br/> print("You may enter.")<br/> else:<br/> print("Try again!")</p>
-<p><br/>Turns out, comparing strings is equally (hehe..) simple, using a == to check for equality and != to check for inequality.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">  password = "unsafepassword"
+  if password == "unsafepassword":
+    print("You may enter.")
+  else:
+    print("Try again!")</pre>
+<p><br/><br/>Turns out, comparing strings is equally (hehe..) simple, using a == to check for equality and != to check for inequality.</p>
 <p>事實證明，使用==來檢查是否相等，使用！=來檢查不相等，比較字符串同樣簡單（hehe ..）。</p>
 <p></p>
 <p>Or, a more practical password-checking piece of code:</p>
 <p></p>
-<p>real_password = "unsafepassword" user_password = input("Enter the password: ") while user_password != real_password: user_password = input("Enter the password: ") print("You may enter!")</p>
 <p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">real_password = "unsafepassword"
+  user_password = input("Enter the password: ")
+  while user_password != real_password:
+    user_password = input("Enter the password: ")
+  print("You may enter!")</pre>
+<pre><br/><br/></pre>
 <p>或者，使用更實用的密碼檢查代碼：</p>
 <p></p>
 <p>Binary search</p>
@@ -123,8 +151,7 @@
 <p>該示例顯示的是，在有序列表中，知道要查找的元素與列表中另一個元素的比較方式，將列表分為兩部分-元素可以位於其中一半，而絕對不能位於其中。 在我們的列表包含數百萬個元素的情況下，知道我們可以將“搜索空間”削減一半，這將大大提高效率。</p>
 <p>When you are writing the solution, first try to write it without binary search. Then when you want to try implementing binary search, write a separate function. In the solution I will give an example for how to write a binary search in Python.</p>
 <p>在編寫解決方案時，請首先嘗試在不進行二進制搜索的情況下編寫它。 然後，當您想嘗試實現二進制搜索時，編寫一個單獨的函數。 在解決方案中，我將給出一個示例，說明如何使用Python編寫二進制搜索。</p>
-<p><br/><br/><span></span></p>
-<h2>21 Write To A File</h2>
+<p><br/><br/><span></span></p><h2>21 Write To A File</h2>
 <p>Exercise 21 (and<span> </span><a href="https://www.practicepython.org/solution/2014/12/08/21-write-to-a-file-solutions.html">Solution</a>)</p>
 <p><span>練習21（和解決方案）</span></p>
 <p>Take the code from the<span> </span><a href="https://www.practicepython.org/exercise/2014/06/06/17-decode-a-web-page.html">How To Decode A Website</a><span> </span>exercise (if you didn’t do it or just want to play with some different code, use the code from the<span> </span><a href="https://www.practicepython.org/solution/2014/07/10/17-decode-a-web-page-solutions.html">solution</a>), and instead of printing the results to a screen, write the results to a txt file. In your code, just make up a name for the file you are saving to.</p>
@@ -148,12 +175,14 @@
 <p><span>Python makes it very easy to write to a file. Depending on what kind of file you want to write to and what kind of data you are writing, your options are plenty. I will show you the simplest form of writing to a file - writing plain text to a plain old text file. In other words, writing a string to a <code class="highlighter-rouge">.txt</code><span><span> </span>file.</span></span></p>
 <p><span><span>Python使寫入文件變得非常容易。根據要寫入的文件類型和要寫入的數據類型，您有很多選擇。我將向您展示最簡單的寫入文件的形式-將純文本寫入純文本文件。換句話說，將字符串寫入.txt文件。</span></span></p>
 <p><span><span>The code looks like this:</span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_save.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
-    <span class="n">open_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'A string to write'</span><span class="p">)</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open('file_to_save.txt', 'w') as open_file:
+    open_file.write('A string to write')</pre>
+<pre></pre>
 <p><span><span>代碼如下：</span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="n">open_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_save.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
-  <span class="n">open_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'A string to write'</span><span class="p">)</span>
-  <span class="n">open_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> open_file = open('file_to_save.txt', 'w')
+  open_file.write('A string to write')
+  open_file.close()</pre>
+<pre><br/><br/></pre>
 <p><span><span>An alternate way of writing the same code is like so:</span></span></p>
 <pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">編寫相同代碼的另一種方法是這樣的：<br/></span></pre>
 <p>The first is considered better programming practice, but the second might explain a little bit better what is going on in the first code sample.</p>
@@ -184,8 +213,7 @@
 </ol>
 <p><span>您始終要確保關閉文件。上面已說明了最簡單的策略-使用with語句，而不是嘗試手動記住.close（）文件。 打開要寫入的文件“ w”將覆蓋該名稱當前存在的任何文件。如果您之前已將數據寫入該文件，則Python打開後立即消失。 只要指定正確的格式，就可以在Python中將任何類型的對象寫入任何類型的文件。最簡單的方法是將字符串寫入.txt文件。但是請記住-在將數字或對象寫入文件之前，必須將其轉換為字符串。在以後的練習中，我們將討論編寫其他格式的內容。</span></p>
 <p>The best way to remember the caveats is to explore them yourself, so have at it!</p>
-<p><span>記住警告的最好方法是親自探索它們，因此，快來試試吧！</span></p>
-<h2>22 Read From File</h2>
+<p><span>記住警告的最好方法是親自探索它們，因此，快來試試吧！</span></p><h2>22 Read From File</h2>
 <p>Exercise 22 (and<span> </span><a href="https://www.practicepython.org/solution/2014/12/14/22-read-from-file-solutions.html">Solution</a>)</p>
 <p><span lang="zh-TW">練習22（和解決方案） 給定一個.txt文件，其中列出了一堆名字<br/></span></p>
 <p><span>Given a </span><code class="highlighter-rouge">.txt</code><span><span> </span>file that has a list of a bunch of names, count how many of each name there are in the file, and print out the results to the screen. I have a<span> </span></span><code class="highlighter-rouge">.txt</code><span><span> </span>file for you, if you want to<span> </span></span><a href="http://www.practicepython.org/assets/nameslist.txt">use it</a><span>!</span></p>
@@ -215,40 +243,44 @@
 </ol>
 <p><span lang="zh-TW">簡單來說，讀取文件需要兩個步驟： 打開文件進行讀取 讀！</span></p>
 <p><span lang="zh-TW"><span>Opening a file for reading is the same as opening for writing, just using a different flag:</span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
-    <span class="n">all_text</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open('file_to_read.txt', 'r') as open_file:
+    all_text = open_file.read()</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">打開文件進行讀取與打開文件相同，只是使用一個不同的標誌：<br/><br/><span>Note how the </span><code class="highlighter-rouge">'r'</code><span><span> </span>flag stands for “read”. The code sample from above reads the entire<span> </span></span><code class="highlighter-rouge">open_file</code><span><span> </span>all at once into the<span> </span></span><code class="highlighter-rouge">all_text</code><span><span> </span>variable. But, this means that we now have a long string in<span> </span></span><code class="highlighter-rouge">all_text</code><span><span> </span>that can then be manipulated in Python using any string methods you want.</span></span></p>
 <p><span lang="zh-TW">注意“ r”標誌代表“ read”。上面的代碼示例將整個open_file一次全部讀取到all_text變量中。但是，這意味著我們現在在all_text中擁有一個長字符串，然後可以使用所需的任何字符串方法在Python中對其進行操作。</span></p>
 <p><span lang="zh-TW"><span>Another way of reading data from the file is line by line:<br/></span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
-  	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-  	<span class="k">while</span> <span class="n">line</span><span class="p">:</span>
-    	<span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-    	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open('file_to_read.txt', 'r') as open_file:
+  	line = open_file.readline()
+  	while line:
+    	print(line)
+    	line = open_file.readline()</pre>
 <p><span lang="zh-TW">從文件讀取數據的另一種方法是逐行：<br/><span>Instead of </span><code class="highlighter-rouge">print(line)</code><span>, you can imagine doing anything you want to the line of text… If you save it to a variable, you have a string that you can then use something like<span> </span></span><code class="highlighter-rouge">.strip()</code><span><span> </span>or<span> </span></span><code class="highlighter-rouge">.split()</code><span><span> </span>with.<br/></span></span></p>
 <p><span lang="zh-TW">代替print（line），您可以想像對文本行進行任何操作……如果將其保存到變量中，則可以使用一個字符串，然後可以使用.strip（）或.split（）之類的東西。</span></p>
 <p>Dictionaries</p>
 <p><span>辭典</span></p>
 <p><span>Dictionaries are Python’s way of associating two pieces of data together. The <a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official documentation</a><span><span> </span>says it all.</span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Adama'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Starbuck'</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s">'Apollo'</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s">'Athena'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s">'Agathon'</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span></code></pre>
-<p><span><span>字典是Python將兩種數據關聯在一起的一種方式。官方文檔說明了一切。</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">student_scores = {'Adama': 100, 'Starbuck': 75, 'Apollo': 80, 'Athena': 85, 'Agathon': 90}
+</pre>
+<pre><span style="font-family: Verdana, Arial, Helvetica, sans-serif;"><br/>字典是Python將兩種數據關聯在一起的一種方式。官方文檔說明了一切。</span></pre>
 <p><span><span>The strings (or whatever happens to the left of the <code class="highlighter-rouge">:</code><span><span> </span>sign), are called<span> </span></span><code class="highlighter-rouge">keys</code><span>. When I want to access the<span> </span></span><code class="highlighter-rouge">values</code><span><span> </span>(the things to the right of the<span> </span></span><code class="highlighter-rouge">:</code><span><span> </span>sign), I need to ask the dictionary for the value associated with the key:</span></span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">adama_score = student_scores['Adama']</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">字符串（或：符號左側發生的任何事情）稱為鍵。當我想訪問值（：符號右邊的東西）時，我需要向字典查詢與鍵關聯的值：<br/><span>You can then modify the score and save it back to the dictionary:</span><br/></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span>
-  <span class="n">adama_score</span> <span class="o">+=</span> <span class="mi">100</span>	<span class="o">%</span> <span class="n">adama_score</span> <span class="ow">is</span> <span class="n">now</span> <span class="mf">200.</span> <span class="n">This</span> <span class="n">doesn</span><span class="s">'t change the dictionary value</span><span class="err">
-</span><span class="s">  student_scores['</span><span class="n">Adama</span><span class="s">'] = adama_score		</span><span class="si">% </span><span class="s">the score in the dictionary is now updated</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> adama_score = student_scores['Adama']
+  adama_score += 100	% adama_score is now 200. This doesn't change the dictionary value
+  student_scores['Adama'] = adama_score		% the score in the dictionary is now updated</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">然後，您可以修改分數並將其保存回字典：<br/><span>I can’t ask the dictionary for the key associated with a value, but I can get a list of all the keys, and the same for all the values:</span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="n">all_scores</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
-  <span class="n">all_names</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> all_scores = student_scores.keys()
+  all_names = student_scores.values()</pre>
+<pre><br/><br/></pre>
 <p><span lang="zh-TW">我無法向字典詢問與某個值相關聯的鍵，但是我可以獲得所有鍵的列表，並且所有值都相同：<br/><span>I can use the </span><code class="highlighter-rouge">in</code><span><span> </span>keyword (just like in lists), do<span> </span></span><code class="highlighter-rouge">dictionary comprehensions</code><span><span> </span>like list comprehensions (these are cool, take a look at the<span> </span></span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official bit about these</a><span>), and iterate over the elements in the dictionary (the syntax is just a little bit different).</span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-  	<span class="k">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for pair in student_scores.items():
+  	print(pair)</pre>
 <p><span lang="zh-TW">我可以使用in關鍵字（就像在列表中一樣），做字典理解（例如列表理解）（這些很酷，看看有關這些的官方知識），然後遍歷字典中的元素（語法只是一點點）有點不同）。</span></p>
 <p>And this prints out pairs of keys and values that look like:<span> </span><code class="highlighter-rouge">(Adama, 100)</code>, etc.</p>
 <p>Because dictionaries are not ordered, looping through them does not guarantee the key / value pairs coming out in a particular order. So be careful.</p>
-<p><span>這會打印出如下的鍵和值對：（Adama，100），等等。 由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</span></p>
-<h2>23 File Overlap</h2>
+<p><span>這會打印出如下的鍵和值對：（Adama，100），等等。 由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。所以要小心</span></p><h2>23 File Overlap</h2>
 <pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW"></span></pre>
 <p>Exercise 23 (and<span> </span><a href="https://www.practicepython.org/solution/2014/12/25/23-file-overlap-solutions.html">Solution</a>)</p>
 <pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">練習23（和解決方案）<br/></span></pre>

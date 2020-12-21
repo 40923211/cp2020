@@ -157,12 +157,14 @@ img.add_border {
 <p><span>Python makes it very easy to write to a file. Depending on what kind of file you want to write to and what kind of data you are writing, your options are plenty. I will show you the simplest form of writing to a file - writing plain text to a plain old text file. In other words, writing a string to a <code class="highlighter-rouge">.txt</code><span><span> </span>file.</span></span></p>
 <p><span><span>Python使寫入文件變得非常容易。根據要寫入的文件類型和要寫入的數據類型，您有很多選擇。我將向您展示最簡單的寫入文件的形式-將純文本寫入純文本文件。換句話說，將字符串寫入.txt文件。</span></span></p>
 <p><span><span>The code looks like this:</span></span></p>
-<pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_save.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
-    <span class="n">open_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'A string to write'</span><span class="p">)</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">with open('file_to_save.txt', 'w') as open_file:
+    open_file.write('A string to write')</pre>
+<pre></pre>
 <p><span><span>代碼如下：</span></span></p>
-<pre><code class="language-python" data-lang="python"> <span class="n">open_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_save.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
-  <span class="n">open_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'A string to write'</span><span class="p">)</span>
-  <span class="n">open_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> open_file = open('file_to_save.txt', 'w')
+  open_file.write('A string to write')
+  open_file.close()</pre>
+<pre><br/><br/></pre>
 <p><span><span>An alternate way of writing the same code is like so:</span></span></p>
 <pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">編寫相同代碼的另一種方法是這樣的：<br/></span></pre>
 <p>The first is considered better programming practice, but the second might explain a little bit better what is going on in the first code sample.</p>
@@ -193,8 +195,7 @@ img.add_border {
 </ol>
 <p><span>您始終要確保關閉文件。上面已說明了最簡單的策略-使用with語句，而不是嘗試手動記住.close（）文件。 打開要寫入的文件“ w”將覆蓋該名稱當前存在的任何文件。如果您之前已將數據寫入該文件，則Python打開後立即消失。 只要指定正確的格式，就可以在Python中將任何類型的對象寫入任何類型的文件。最簡單的方法是將字符串寫入.txt文件。但是請記住-在將數字或對象寫入文件之前，必須將其轉換為字符串。在以後的練習中，我們將討論編寫其他格式的內容。</span></p>
 <p>The best way to remember the caveats is to explore them yourself, so have at it!</p>
-<p><span>記住警告的最好方法是親自探索它們，因此，快來試試吧！</span></p>
-<br />20 Element Search << <a href='20 Element Search.html'>Previous</a> <a href='22 Read From File.html'>Next</a> >> 22 Read From File</div>
+<p><span>記住警告的最好方法是親自探索它們，因此，快來試試吧！</span></p><br />20 Element Search << <a href='20 Element Search.html'>Previous</a> <a href='22 Read From File.html'>Next</a> >> 22 Read From File</div>
         
     <!-- footer -->
       <div class="container">
