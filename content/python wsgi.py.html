@@ -133,106 +133,10 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW3 << <a href='HW3.html'>Previous</a> <a href='21 Write To A File.html'>Next</a> >> 21 Write To A File<br /><h1>20 Element Search</h1>
-<p><br/>Exercise 20 (and Solution)</p>
-<p>Write a function that takes an ordered list of numbers (a list where the elements are in order from smallest to largest) and another number. The function decides whether or not the given number is inside the list and returns (then prints) an appropriate boolean.</p>
-<p>練習20（和解決方案）<br/>編寫一個函數，該函數接受一個有序的數字列表（一個元素從最小到最大的順序列表）和另一個數字。 該函數確定給定的數字是否在列表中，並返回（然後打印）適當的布爾值。</p>
-<p>Extras:</p>
-<p>附加功能</p>
-<p>Use binary search.使用二進制搜索。<br/>Discussion</p>
-<p>Topics:</p>
-<p>Booleans - True and False<br/>Equality testing<br/>Binary search<br/>討論區<br/>話題：</p>
-<p>布爾值-對與錯<br/>平等測試<br/>二進制搜索</p>
-<p>Booleans</p>
-<p>When you are writing programs, there is often a time when you need to make a decision about something based on the truthfulness of something else. Basically, you need to make a decision based on whether something is TRUE or something is FALSE.</p>
-<p>An obvious example is when using conditionals:</p>
-<p>布爾值<br/>在編寫程序時，通常會需要根據其他事物的真實性來做出決策。 基本上，您需要根據某物是TRUE還是FALSE來做出決定。</p>
-<p>一個明顯的例子是使用條件句時：</p>
-<p><br/><br/></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">michele_age = 22
-  truth_value = michele_age &gt; 17
-  if (truth_value):
-    print("Michele can see a rated R movie")</pre>
-<p><br/><br/></p>
-<p>(We talked about this idea of conditionals in a previous post.)</p>
-<p>But what is happening behind the scenes is that the statement michele_age &gt; 17 is being evaluated into a type that is either True or False. This is then getting stored inside the variable truth_value, and then the decision is being made inside the conditional.</p>
-<p>Here is another example:</p>
-<p>（我們在上一篇文章中談到了條件式的想法。）</p>
-<p>但是幕後發生的事情是，語句michele_age&gt; 17正在被評估為True或False類型。 然後將其存儲在變量true_value中，然後在條件中進行決策。</p>
-<p>這是另一個示例：</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> while True:
-    age = input("How old are you? ")
-    if age &gt;= 17: 
-      print("can see a rated R movie")
-    elif age &lt; 17 and age &gt; 12:
-      print("can see a rated PG-13 movie")
-    else: 
-      print("can only see rated PG movies")</pre>
+    <div id="tipue_search_content">有問題就到gitter問老師 << <a href='有問題就到gitter問老師.html'>Previous</a> <a href='先git add .   在commit.html'>Next</a> >> 先git add .   在commit<br /><h1>python wsgi.py</h1>
+<p>不可以多一個空格</p>
 <p></p>
-<p></p>
-<p>What the while True statement does at the beginning of the code segment is continue asking for an age and printing a response - it never stops. (To stop it, press CTRL-C in a terminal or in the Python shell).</p>
-<p>These types - True and False are called boolean types or boolean variables. They can only take on two values, either True or False.</p>
-<p>For more extensive reading on Python booleans, take a look at these resources.</p>
-<p></p>
-<p>而True語句在代碼段的開頭所做的是繼續詢問年齡並打印響應-它永遠不會停止。 （要停止它，請在終端或Python Shell中按CTRL-C）。<br/>這些類型-True和False稱為布爾類型或布爾變量。 它們只能採用兩個值，即True或False。</p>
-<p>有關Python布爾值的更多詳細信息，請查看這些資源。</p>
-<p></p>
-<p>Equality testing on strings</p>
-<p>字符串相等性測試</p>
-<p></p>
-<p>Scenarios come up where you need to test if things are equal to each other - numbers or strings or something else. We covered this idea in a previous post, but it is worth returning to again, this time for strings.</p>
-<p>Good thing it’s easy!</p>
-<p>Remember, comparing numbers for equality is done with an == sign, like so:</p>
-<p></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> age = 21
-  if age == 21:
-    print("You are 21!")
-  elif age &gt; 21:
-    print("You're old.")
-  else:
-    print("Young one!")</pre>
-<pre><br/><br/></pre>
-<p>出現場景時，您需要測試事物是否彼此相等-數字或字符串或其他。 我們在上一篇文章中介紹了這個想法，但是這次還是值得再次討論的。</p>
-<p>好東西很容易！</p>
-<p>請記住，比較數字是否相等是使用==符號完成的，如下所示：</p>
-<p></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">  password = "unsafepassword"
-  if password == "unsafepassword":
-    print("You may enter.")
-  else:
-    print("Try again!")</pre>
-<p><br/><br/>Turns out, comparing strings is equally (hehe..) simple, using a == to check for equality and != to check for inequality.</p>
-<p>事實證明，使用==來檢查是否相等，使用！=來檢查不相等，比較字符串同樣簡單（hehe ..）。</p>
-<p></p>
-<p>Or, a more practical password-checking piece of code:</p>
-<p></p>
-<p></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">real_password = "unsafepassword"
-  user_password = input("Enter the password: ")
-  while user_password != real_password:
-    user_password = input("Enter the password: ")
-  print("You may enter!")</pre>
-<pre><br/><br/></pre>
-<p>或者，使用更實用的密碼檢查代碼：</p>
-<p></p>
-<p>Binary search</p>
-<p></p>
-<p></p>
-<p><br/>二進制搜索</p>
-<p></p>
-<p><br/>There are a number of ways to search for elements in a list, and there is no one correct way to do so. The point of this exercise is to get you thinking about possible ways to search for elements in the list, in an entire sequence of exercises about lists, searching, and sorting. This exercise might seem silly and easy at first, but the more you dive into this topic, the more difficult it becomes.</p>
-<p>有多種方法可以搜索列表中的元素，但沒有一種正確的方法可以搜索列表中的元素。 該練習的目的是讓您思考有關列表，搜索和排序的整個練習序列中搜索列表中元素的可能方法。 剛開始時，此練習可能看起來很愚蠢且容易，但是您越深入該主題，就越困難。</p>
-<p></p>
-<p>The word “binary” means there are two choices (in computers, often this is 0 or 1, but it really means any choice between two things). “Search” is to look for something. So the main idea behind binary search is to look for something in a way that gives you a decision tree for where to look, containing two choices. Let me give you an example:</p>
-<p>“二進制”一詞表示有兩種選擇（在計算機中，通常是0或1，但實際上表示在兩種情況之間可以選擇）。 “搜索”是尋找東西。 因此，二進制搜索背後的主要思想是以某種方式查找內容，該方式可以為您提供決策樹，以查找位置，其中包含兩個選擇。 讓我舉一個例子：</p>
-<p>Let’s take the list a = [1, 3, 5, 30, 42, 43, 500]. It is an “ordered list”, or a list where the elements in the list go from smaller to larger. Let’s say we want to know whether the element 9 is in the list or not. Here is what we do:</p>
-<p>讓我們以列表= [1、3、5、30、42、43、500]為例。 它是一個“有序列表”，或者是列表中元素從小到大的列表。 假設我們想知道元素9是否在列表中。 這是我們的工作：</p>
-<p>Look at the middle element in the list - it is ‘30’. * ‘9 &lt; 30’, so let us ignore the elements to the right of ‘30’.<br/>The new list we are looking at is now [1, 3, 5].<br/>Look at the middle element in this new list - it is 3.<br/>‘9 &gt; 3’, so ignore the elements to the left of 3.<br/>The new list we are looking at is [5].<br/>The list has one element and it is not 9.<br/>9 is not in the list.<br/>查看列表中的中間元素-它是“ 30”。 *“ 9 &lt;30”，因此我們忽略“ 30”右側的元素。<br/>現在，我們正在查看的新列表為[1、3、5]。<br/>看一下這個新列表的中間元素-是3。<br/>‘9&gt; 3’，因此忽略3左側的元素。<br/>我們正在查看的新列表為[5]。<br/>該列表只有一個元素，而不是9。<br/>9不在列表中。</p>
-<p>What the example shows is that in an ordered list, knowing how the element you are looking for compares to another element in the list splits the list in two - one half where the element can be, and one where it definitely cannot be. In the case where our list contains millions of elements, knowing that we can cut the “search space” in half is a great increase in efficiency.</p>
-<p>該示例顯示的是，在有序列表中，知道要查找的元素與列表中另一個元素的比較方式，將列表分為兩部分-元素可以位於其中一半，而絕對不能位於其中。 在我們的列表包含數百萬個元素的情況下，知道我們可以將“搜索空間”削減一半，這將大大提高效率。</p>
-<p>When you are writing the solution, first try to write it without binary search. Then when you want to try implementing binary search, write a separate function. In the solution I will give an example for how to write a binary search in Python.</p>
-<p>在編寫解決方案時，請首先嘗試在不進行二進制搜索的情況下編寫它。 然後，當您想嘗試實現二進制搜索時，編寫一個單獨的函數。 在解決方案中，我將給出一個示例，說明如何使用Python編寫二進制搜索。</p>
-<p><br/><br/><span></span></p><br />HW3 << <a href='HW3.html'>Previous</a> <a href='21 Write To A File.html'>Next</a> >> 21 Write To A File</div>
+<br />有問題就到gitter問老師 << <a href='有問題就到gitter問老師.html'>Previous</a> <a href='先git add .   在commit.html'>Next</a> >> 先git add .   在commit</div>
         
     <!-- footer -->
       <div class="container">
