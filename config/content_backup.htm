@@ -1,4 +1,5 @@
 <h1>首頁</h1>
+<p>阿翰的網站</p>
 <p><img height="325" src="http://blog-imgs-70.fc2.com/h/r/e/hrets/IMG_0085.jpg" width="433"/></p>
 <p>這學期千辛萬苦地走過，在茫茫大海中找尋課業的答案，就像徐徐的海浪，看似溫柔卻蘊含風暴，起起伏伏就像我孤獨的心，霧茫茫的夜晚，在網路上漂泊，山窮水復疑無路，柳暗花明在高處，原來答案都在網路上，用最佳的關鍵字找尋最合適的答案，這也是我這學期最有收穫的。</p>
 <p>不論遇到何種問題，針對所做的動作，針對問題去做提問，不要有模菱兩可或多方向猜想，以致老師不好解決問題，而我也從中學習到了如何編輯自己的網頁，及githud、kaggle等，好好運用免費資源去最大化學習效率，日後也要繼續加強英文才能運用外國網站去賺錢。</p><h1>錯誤排除紀錄</h1>
@@ -53,7 +54,22 @@ print(list2)
 </div>
 <p><img alt="" height="243" src="/images/螢幕擷取畫面 2020-12-08 153217.png" width="470"/></p><h2>作業2-2</h2>
 <p>還沒有成果</p><h2>作業2-3</h2>
-<p>沒得參考</p>
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#繼2-1
+import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1a = []
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("共" + str(len(cp1a)) + "筆")
+#帶入陳述句
+def site(num):
+    print("https://github.com/" + str(num) + "/cp2020")
+#將cp1a的數帶入陳述句
+for num in cp1a:
+    site(num)</pre>
+</div>
 <p></p><h1>HW3</h1>
 <h2>20 Element Search</h2>
 <p><br/>Exercise 20 (and Solution)</p>

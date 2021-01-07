@@ -54,7 +54,23 @@ print(list2)
 </div>
 <p><img alt="" height="243" src="/images/螢幕擷取畫面 2020-12-08 153217.png" width="470"/></p><h2>作業2-2</h2>
 <p>還沒有成果</p><h2>作業2-3</h2>
-<p>沒得參考</p>
+<p>參考50號的</p>
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#繼2-1
+import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1a = []
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("共" + str(len(cp1a)) + "筆")
+#帶入陳述句
+def site(num):
+    print("https://github.com/" + str(num) + "/cp2020")
+#將cp1a的數帶入陳述句
+for num in cp1a:
+    site(num)</pre>
+</div>
 <p></p><h1>HW3</h1>
 <h2>20 Element Search</h2>
 <p><br/>Exercise 20 (and Solution)</p>

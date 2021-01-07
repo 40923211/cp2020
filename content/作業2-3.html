@@ -134,7 +134,23 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">作業2-2 << <a href='作業2-2.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3<br /><h1>作業2-3</h1>
-<p>沒得參考</p>
+<p>參考50號的</p>
+<div class="line number1 index0 alt2">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#繼2-1
+import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1a = []
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("共" + str(len(cp1a)) + "筆")
+#帶入陳述句
+def site(num):
+    print("https://github.com/" + str(num) + "/cp2020")
+#將cp1a的數帶入陳述句
+for num in cp1a:
+    site(num)</pre>
+</div>
 <p></p><br />作業2-2 << <a href='作業2-2.html'>Previous</a> <a href='HW3.html'>Next</a> >> HW3</div>
         
     <!-- footer -->
